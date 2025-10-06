@@ -10,6 +10,7 @@ class Enemy
     {
         if (string.IsNullOrEmpty(name)) throw new ArgumentException("Name cannot be empty!");
         this._name = name;
+        _totalEnemies++;
     }
     public string Name => _name;
     public static uint TotalEnemies => _totalEnemies;
